@@ -1,0 +1,265 @@
+@font-face {
+  font-family: 'Amatic-bold';
+  src: url('../fonts/Amatic-Bold.ttf');
+}
+html,
+body {
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  background-color: #bbbbbb;
+  height: 100%;
+}
+body #header {
+  background-color: #111111;
+  color: #ffffff;
+  width: 15%;
+  height: 100%;
+  min-height: 100vh;
+  position: fixed;
+  z-index: 1;
+}
+body #header #toggle-aside {
+  position: absolute;
+  top: 1%;
+  right: 5%;
+}
+body #header nav {
+  padding-left: 15px;
+  line-height: 2;
+  color: #bbbbbb;
+  font-family: 'Helvetica';
+  font-weight: bold;
+}
+body #header nav img {
+  display: block;
+  width: 40%;
+  margin: 25px auto;
+  padding-bottom: 50px;
+  padding-top: 25px;
+  border-bottom: 1px solid #bbbbbb;
+}
+body #header nav ul {
+  list-style-type: none;
+  padding: 5px 15px;
+}
+body #main {
+  width: 85%;
+  position: relative;
+  overflow-y: hidden;
+  min-height: 100vh;
+  margin-left: 15%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b1114+0,303030+100&0.71+0,1+100 */
+  background: -moz-linear-gradient(top, rgba(11, 17, 20, 0.71) 0%, #303030 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(11, 17, 20, 0.71) 0%, #303030 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(11, 17, 20, 0.71) 0%, #303030 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b50b1114', endColorstr='#303030', GradientType=0);
+  /* IE6-9 */
+  color: #ffffff;
+}
+body #main article.contenu {
+  text-align: center;
+  padding: 80px 15px 0px 15px;
+}
+body #main article.contenu hr {
+  width: 30%;
+  color: #bbbbbb;
+}
+body #main article.contenu div.album-artiste {
+  border-bottom: 1px solid #5a5a5a;
+}
+body #main article.contenu div.entete-artiste h4.followers-artiste {
+  font-weight: lighter;
+}
+body #main article.contenu div.actions {
+  padding: 15px 0px;
+}
+body #main article.contenu div.actions button.btn {
+  text-transform: uppercase;
+  color: #ffffff;
+  border-radius: 30px;
+  padding: 15px 25px;
+  font-size: 12px;
+  margin: 0px 15px;
+  width: 150px;
+  min-height: 56px;
+}
+body #main article.contenu div.actions button.btn:hover {
+  cursor: pointer;
+}
+body #main article.contenu div.actions button.btn.btn-principal {
+  background-color: #1ed760;
+  border: 2px solid transparent;
+}
+body #main article.contenu div.actions button.btn.btn-principal:hover {
+  font-size: 16px;
+  border: 2px solid transparent;
+}
+body #main article.contenu div.actions button.btn.btn-secondaire {
+  background-color: transparent;
+  border: 2px solid #bbbbbb;
+}
+body #main article.contenu div.actions button.btn.btn-secondaire:hover {
+  font-size: 16px;
+  border: 2px solid #bbbbbb;
+}
+body #main article.contenu div.actions button.btn.btn-transparent {
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+body #main article.contenu div.actions button.btn.btn-transparent:hover {
+  font-size: 16px;
+  border: 2px solid transparent;
+}
+body #main article.contenu div.description-artiste {
+  padding: 15px 30px;
+}
+.album-artiste {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: left;
+  padding: 25px 0px;
+}
+.album-artiste.pochette-haut {
+  flex-direction: column;
+  align-items: center;
+}
+.album-artiste.pochette-droite {
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+.album-artiste .pochette-album {
+  width: 30%;
+}
+.album-artiste .pochette-album .roll {
+  background: center center no-repeat #fff;
+  height: 363px;
+  position: absolute;
+  text-align: center;
+  line-height: 363px;
+  width: 30%;
+  z-index: 10;
+  opacity: 0.1;
+}
+.album-artiste .pochette-album .roll:before {
+  content: "\f00e";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #000000;
+  font-size: 40px;
+  padding-right: 0.5em;
+  position: absolute;
+  top: 0;
+  left: 95px;
+}
+.album-artiste .pochette-album img {
+  display: block;
+  width: 70%;
+  margin: 0px auto;
+  padding: 15px;
+}
+.album-artiste .titres-album {
+  list-style-type: none;
+  line-height: 2;
+  width: 60%;
+  padding-left: 0px;
+}
+.album-artiste .titres-album li {
+  display: block;
+}
+.album-artiste .titres-album li:hover {
+  cursor: pointer;
+}
+.album-artiste .titres-album li .bouton-play {
+  display: inline-block;
+  margin-right: 2%;
+}
+.album-artiste .titres-album li 12 .hidden {
+  visibility: hidden;
+}
+.album-artiste .titres-album li .numero-titre {
+  margin-right: 2%;
+  display: inline-block;
+}
+.album-artiste .titres-album li .duree-titre {
+  float: right;
+}
+#footer {
+  position: fixed;
+  align-self: flex-end;
+  height: 80px;
+  width: 100%;
+  bottom: 0;
+  background-color: #3E3E3E;
+  z-index: 999;
+  display: none;
+}
+#footer audio {
+  width: 100%;
+  background-color: transparent;
+}
+#footer #audioPlayer {
+  width: 100%;
+  height: 80px;
+  display: none;
+}
+.hidden {
+  display: none;
+}
+/* Notre carousel super cool */
+div#slider {
+  padding: 30px 0px;
+  perspective: 350px;
+  background: rgba(0, 0, 0, 0.56);
+  overflow: hidden;
+  min-height: 350px;
+}
+span.slider-icone-rotation {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 30px;
+  transition: 0.6s color;
+  position: absolute;
+  border-bottom: none;
+  top: 45%;
+}
+span.slider-icone-rotation:hover {
+  color: #888;
+  cursor: pointer;
+}
+span.slider-icone-rotation.slider-icone-rotation-left {
+  left: 5%;
+}
+span.slider-icone-rotation.slider-icone-rotation-right {
+  right: 5%;
+}
+figure#slider-rotation {
+  transform-style: preserve-3d;
+  min-height: 350px;
+  transform-origin: 50% 50% -500px;
+  transition: 1s;
+}
+figure#slider-rotation img {
+  width: 40%;
+  min-width: 300px;
+  max-width: 350px;
+  min-height: 300px;
+  max-height: 350px;
+  position: absolute;
+  left: 30%;
+  transform-origin: 50% 50% -500px;
+}

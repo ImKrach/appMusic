@@ -1,0 +1,445 @@
+<!-- Slider -->
+<!-- Menu déroulant -->
+<!-- Menu side toggle -->
+<!-- Menu changeant l'apparence du site via des boutons -->
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Template page d'accueil</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/styless.css">
+  </head>
+  <body>
+
+    <aside id="header">
+      <i id="toggle-aside" class="fa fa-chevron-right"></i>
+      <nav>
+        <img src="images/logo.png" alt="Logo musique">
+        <ul>
+          <li>Accueil</li>
+          <li>Recherche</li>
+          <li>Mes favoris</li>
+          <li>Mes playlists</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <section id="main" class="conteneur">
+      <!-- <h2 class="hidden">Titre masqué</h2> -->
+
+      <article class="contenu">
+
+        <div class="entete-artiste">
+          <h2 class="nom-artiste">RIDSA</h2>
+          <h4 class="followers-artiste">86,191 followers</h4>
+        </div>
+
+        <hr>
+
+        <div class="actions">
+          <button class="btn btn-principal">PLAY</button>
+          <button class="btn btn-secondaire">FOLLOW</button>
+          <button class="btn btn-transparent">&middot; &middot; &middot;</button>
+        </div>
+
+        <hr>
+
+        <div class="description-artiste">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed leo cursus, blandit nibh a, luctus risus. Sed sed facilisis justo. Proin augue libero, fringilla a est at, laoreet ultricies est. Nulla tempus ex pulvinar pretium ultricies. Fusce sed velit a mi ornare sagittis. Nam feugiat nulla odio, sit amet ornare diam hendrerit eget. Donec at feugiat sapien, quis aliquet mi. Fusce vitae finibus orci, non viverra mi. In mollis elit sapien, eu finibus dui elementum et. Nullam sagittis auctor faucibus. Etiam congue leo quis eros tincidunt ultricies. Cras consequat, nisl in fringilla vestibulum, mi ex pellentesque ante, eu porta sapien velit in nisi.
+
+          Donec et imperdiet ipsum, eget lobortis nibh. Etiam a elementum dui. Donec orci nunc, sagittis at justo sed, placerat fringilla eros. Integer lacinia convallis ante egestas iaculis. Duis at aliquam ex, sed aliquam purus. Sed ac mauris magna. Sed mollis bibendum sapien, nec bibendum erat hendrerit et. Aliquam a diam in mi facilisis interdum. Curabitur at ultricies nibh, vehicula finibus quam. Mauris vestibulum, elit a eleifend maximus, nisi felis tincidunt metus, vitae dictum turpis eros sed enim. Praesent maximus metus ut erat tincidunt, elementum tempor nisl dignissim.
+
+          Aenean tristique mauris mi, id molestie nisl auctor eget. Etiam suscipit non nisl eu aliquet. Duis sit amet placerat quam. Sed posuere lacus eget magna pretium tempus. Sed et condimentum massa. Suspendisse luctus elit et dictum facilisis. Morbi eleifend dictum tortor, sit amet tempus felis euismod ut. Sed aliquet leo quis sapien gravida, in eleifend metus scelerisque. Sed varius feugiat nisi at mollis.
+
+          Morbi eu ante sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi tristique nibh eget ante tincidunt ornare. Sed accumsan lacus lorem, a pellentesque sapien efficitur mattis. Sed fermentum nibh quis ligula suscipit vestibulum. Praesent auctor tincidunt elit. Nullam pellentesque sed velit et fermentum. Donec a leo non tellus hendrerit auctor et convallis enim. Proin quis elit ultrices, tempus lacus quis, facilisis metus. Sed non tempus lectus, ac venenatis lectus. Duis blandit eros et vehicula facilisis. Aenean sed vehicula eros, in venenatis ligula. Duis quis risus metus. Vivamus id ligula ante.
+        </div>
+
+        <div id="slider">
+          <figure id="slider-rotation">
+            <img src="images/album_1.jpg" alt="image_album_1" id="test_1">
+            <img src="images/album_2.jpg" alt="image_album_2" id="test_2">
+            <img src="images/album_3.jpg" alt="image_album_3" id="test_3">
+            <img src="images/album_4.jpg" alt="image_album_4" id="test_4">
+            <img src="images/album_5.jpg" alt="image_album_5" id="test_5">
+          </figure>
+          <span style="float:left" class="slider-icone-rotation slider-icone-rotation-left" onclick="animerSlider('avant')">
+            <i class="fa fa-chevron-left"></i>
+          </span>
+          <span style="float:right" class="slider-icone-rotation slider-icone-rotation-right" onclick="animerSlider('apres')">
+            <i class="fa fa-chevron-right"></i>
+          </span>
+        </div>
+
+        <div class="album-artiste">
+          <div class="pochette-album">
+            <img src="images/RIDSA_pochette-album.jpg" alt="RIDSA - Mes histoires">
+          </div>
+
+          <ul class="titres-album">
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe" data-status="off">
+              <span class="numero-titre">1.</span>
+              <span class="bouton-play hidden"><i class="fa fa-play-circle"></i></span>
+              <span class="titre-titre">Oh mama</span>
+              <span class="duree-titre">3:21</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe" data-status="off">
+              <span class="numero-titre">2.</span>
+              <span class="bouton-play hidden"><i class="fa fa-play-circle"></i></span>
+              <span class="titre-titre">Solo</span>
+              <span class="duree-titre">3:40</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe" data-status="off">
+              <span class="numero-titre">3.</span>
+              <span class="bouton-play hidden"><i class="fa fa-play-circle"></i></span>
+              <span class="titre-titre">Family (feat. Wanz)</span>
+              <span class="duree-titre">3:32</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe" data-status="off">
+              <span class="numero-titre">4.</span>
+              <span class="bouton-play hidden"><i class="fa fa-play-circle"></i></span>
+              <span class="titre-titre">À la tienne</span>
+              <span class="duree-titre">3:54</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe" data-status="off">
+              <span class="numero-titre">5.</span>
+              <span class="bouton-play hidden"><i class="fa fa-play-circle"></i></span>
+              <span class="titre-titre">Quoi qu'on en dise</span>
+              <span class="duree-titre">4:17</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe" data-status="off">
+              <span class="numero-titre">6.</span>
+              <span class="bouton-play hidden"><i class="fa fa-play-circle"></i></span>
+              <span class="titre-titre">Elle a mal</span>
+              <span class="duree-titre">3:38</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe" data-status="off">
+              <span class="numero-titre">7.</span>
+              <span class="bouton-play hidden"><i class="fa fa-play-circle"></i></span>
+              <span class="titre-titre">On s'évade</span>
+              <span class="duree-titre">3:15</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe" data-status="off">
+              <span class="numero-titre">8.</span>
+              <span class="bouton-play hidden"><i class="fa fa-play-circle"></i></span>
+              <span class="titre-titre">Ne m'oublie pas</span>
+              <span class="duree-titre">3:52</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe" data-status="off">
+              <span class="numero-titre">9.</span>
+              <span class="bouton-play hidden"><i class="fa fa-play-circle"></i></span>
+              <span class="titre-titre">Fais le vide (feat. Dieselle)</span>
+              <span class="duree-titre">3:24</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe" data-status="off">
+              <span class="numero-titre">10.</span>
+              <span class="bouton-play hidden"><i class="fa fa-play-circle"></i></span>
+              <span class="titre-titre">Mes histoires</span>
+              <span class="duree-titre">3:36</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe" data-status="off">
+              <span class="numero-titre">11.</span>
+              <span class="bouton-play hidden"><i class="fa fa-play-circle"></i></span>
+              <span class="titre-titre">Je cours</span>
+              <span class="duree-titre">3:34</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe" data-status="off">
+              <span class="numero-titre">12.</span>
+              <span class="bouton-play hidden"><i class="fa fa-play-circle"></i></span>
+              <span class="titre-titre">Amour sans fin</span>
+              <span class="duree-titre">3:08</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe" data-status="off">
+              <span class="numero-titre">13.</span>
+              <span class="bouton-play hidden"><i class="fa fa-play-circle"></i></span>
+              <span class="titre-titre">Laisse-moi parler</span>
+              <span class="duree-titre">7:03</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe" data-status="off">
+              <span class="numero-titre">14.</span>
+              <span class="bouton-play hidden"><i class="fa fa-play-circle"></i></span>
+              <span class="titre-titre">Adios (feat. Pépé Rosso & Angèle)</span>
+              <span class="duree-titre">3:26</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe" data-status="off">
+              <span class="numero-titre">15.</span>
+              <span class="bouton-play hidden"><i class="fa fa-play-circle"></i></span>
+              <span class="titre-titre">Nous et seulement nous (feat. Angele)</span>
+              <span class="duree-titre">3:44</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="album-artiste">
+          <div class="pochette-album">
+            <img src="images/RIDSA_pochette-album.jpg" alt="RIDSA - Mes histoires">
+          </div>
+
+          <ul class="titres-album">
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">1.</span>
+              <span class="titre-titre">Oh mama</span>
+              <span class="duree-titre">3:21</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">2.</span>
+              <span class="titre-titre">Solo</span>
+              <span class="duree-titre">3:40</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">3.</span>
+              <span class="titre-titre">Family (feat. Wanz)</span>
+              <span class="duree-titre">3:32</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">4.</span>
+              <span class="titre-titre">À la tienne</span>
+              <span class="duree-titre">3:54</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">5.</span>
+              <span class="titre-titre">Quoi qu'on en dise</span>
+              <span class="duree-titre">4:17</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">6.</span>
+              <span class="titre-titre">Elle a mal</span>
+              <span class="duree-titre">3:38</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">7.</span>
+              <span class="titre-titre">On s'évade</span>
+              <span class="duree-titre">3:15</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">8.</span>
+              <span class="titre-titre">Ne m'oublie pas</span>
+              <span class="duree-titre">3:52</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">9.</span>
+              <span class="titre-titre">Fais le vide (feat. Dieselle)</span>
+              <span class="duree-titre">3:24</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">10.</span>
+              <span class="titre-titre">Mes histoires</span>
+              <span class="duree-titre">3:36</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">11.</span>
+              <span class="titre-titre">Je cours</span>
+              <span class="duree-titre">3:34</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">12.</span>
+              <span class="titre-titre">Amour sans fin</span>
+              <span class="duree-titre">3:08</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">13.</span>
+              <span class="titre-titre">Laisse-moi parler</span>
+              <span class="duree-titre">7:03</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">14.</span>
+              <span class="titre-titre">Adios (feat. Pépé Rosso & Angèle)</span>
+              <span class="duree-titre">3:26</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">15.</span>
+              <span class="titre-titre">Nous et seulement nous (feat. Angele)</span>
+              <span class="duree-titre">3:44</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="album-artiste">
+          <div class="pochette-album">
+            <img src="images/RIDSA_pochette-album.jpg" alt="RIDSA - Mes histoires">
+          </div>
+
+          <ul class="titres-album">
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">1.</span>
+              <span class="titre-titre">Oh mama</span>
+              <span class="duree-titre">3:21</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">2.</span>
+              <span class="titre-titre">Solo</span>
+              <span class="duree-titre">3:40</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">3.</span>
+              <span class="titre-titre">Family (feat. Wanz)</span>
+              <span class="duree-titre">3:32</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">4.</span>
+              <span class="titre-titre">À la tienne</span>
+              <span class="duree-titre">3:54</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">5.</span>
+              <span class="titre-titre">Quoi qu'on en dise</span>
+              <span class="duree-titre">4:17</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">6.</span>
+              <span class="titre-titre">Elle a mal</span>
+              <span class="duree-titre">3:38</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">7.</span>
+              <span class="titre-titre">On s'évade</span>
+              <span class="duree-titre">3:15</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">8.</span>
+              <span class="titre-titre">Ne m'oublie pas</span>
+              <span class="duree-titre">3:52</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">9.</span>
+              <span class="titre-titre">Fais le vide (feat. Dieselle)</span>
+              <span class="duree-titre">3:24</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">10.</span>
+              <span class="titre-titre">Mes histoires</span>
+              <span class="duree-titre">3:36</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">11.</span>
+              <span class="titre-titre">Je cours</span>
+              <span class="duree-titre">3:34</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">12.</span>
+              <span class="titre-titre">Amour sans fin</span>
+              <span class="duree-titre">3:08</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">13.</span>
+              <span class="titre-titre">Laisse-moi parler</span>
+              <span class="duree-titre">7:03</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">14.</span>
+              <span class="titre-titre">Adios (feat. Pépé Rosso & Angèle)</span>
+              <span class="duree-titre">3:26</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">15.</span>
+              <span class="titre-titre">Nous et seulement nous (feat. Angele)</span>
+              <span class="duree-titre">3:44</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="album-artiste">
+          <div class="pochette-album">
+            <img src="images/RIDSA_pochette-album.jpg" alt="RIDSA - Mes histoires">
+          </div>
+
+          <ul class="titres-album">
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">1.</span>
+              <span class="titre-titre">Oh mama</span>
+              <span class="duree-titre">3:21</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">2.</span>
+              <span class="titre-titre">Solo</span>
+              <span class="duree-titre">3:40</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">3.</span>
+              <span class="titre-titre">Family (feat. Wanz)</span>
+              <span class="duree-titre">3:32</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">4.</span>
+              <span class="titre-titre">À la tienne</span>
+              <span class="duree-titre">3:54</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">5.</span>
+              <span class="titre-titre">Quoi qu'on en dise</span>
+              <span class="duree-titre">4:17</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">6.</span>
+              <span class="titre-titre">Elle a mal</span>
+              <span class="duree-titre">3:38</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">7.</span>
+              <span class="titre-titre">On s'évade</span>
+              <span class="duree-titre">3:15</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">8.</span>
+              <span class="titre-titre">Ne m'oublie pas</span>
+              <span class="duree-titre">3:52</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">9.</span>
+              <span class="titre-titre">Fais le vide (feat. Dieselle)</span>
+              <span class="duree-titre">3:24</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">10.</span>
+              <span class="titre-titre">Mes histoires</span>
+              <span class="duree-titre">3:36</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">11.</span>
+              <span class="titre-titre">Je cours</span>
+              <span class="duree-titre">3:34</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">12.</span>
+              <span class="titre-titre">Amour sans fin</span>
+              <span class="duree-titre">3:08</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">13.</span>
+              <span class="titre-titre">Laisse-moi parler</span>
+              <span class="duree-titre">7:03</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">14.</span>
+              <span class="titre-titre">Adios (feat. Pépé Rosso & Angèle)</span>
+              <span class="duree-titre">3:26</span>
+            </li>
+            <li data-source="https://open.spotify.com/embed?uri=spotify:track:10fUzlnwOwlKXhu5mg7fTe">
+              <span class="numero-titre">15.</span>
+              <span class="titre-titre">Nous et seulement nous (feat. Angele)</span>
+              <span class="duree-titre">3:44</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+
+      <!-- Pour ajouter un album à cet artiste, décommenter  -->
+      <!-- <article id="article2" class="contenu"></article> -->
+      <!-- <article id="article3" class="contenu"></article> -->
+      <!-- <article id="article4" class="contenu"></article> -->
+
+    </section>
+
+    <footer id="footer">
+      <!-- On donne un src histoire de pas avoir d'erreur HTML5 -->
+      <!-- <audio id="audioPlayer" controls src="media/music.mp3"></audio> -->
+      <iframe id="audioPlayer" src="" frameborder="0" allowtransparency="true"></iframe>
+    </footer>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/script.js"></script>
+  </body>
+</html>
