@@ -5,5 +5,7 @@ Le delai de 0.5s sur l'effet :hover des boutons donne une petite sensation de la
   --> Correction : changement de l'effect hover, maintenant le fond change au lieu de la police
 
 Il faut deux clics aux boutons play pour qu'ils passent en boutons pause.
+  --> Correction : n'est pas eu le temps de corriger ce bug étrange
 
 PS: Nice site
+  --> Correction : Merci :)

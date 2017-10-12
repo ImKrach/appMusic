@@ -1,5 +1,9 @@
 # tp-frontpage
 
+## Introduction
+
+Le feedback du développeur du projet n°3 est contenu dans le fichier 'rapport de bug' à la racine du projet.
+
 ## Pré-requis
 
 Node et npm doivent être installés
