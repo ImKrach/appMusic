@@ -78,10 +78,12 @@ function initialisationSidebar() {
     var mainWidthToggle = ($('#main')[0].style.width == '100%') ? '85%' : '100%';
     var mainMarginLeftToggle = ($('#main')[0].style.marginLeft == '0%') ? '15%' : '0%';
 
+    $('#header').toggleClass('off');
     $('#header').animate({
       'left':headerLeftToggle
     }, 250);
 
+    $('#main').toggleClass('header-off');
     $('#main').animate({
       'margin-left':mainMarginLeftToggle,
       'width':mainWidthToggle

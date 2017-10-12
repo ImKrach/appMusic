@@ -47,6 +47,12 @@ body {
     top:0%;
     z-index: 1;
 
+    &:not(.off) {
+      @media only screen and (max-width: 1200px) {
+        width: 178px;
+      }
+    }
+
     #toggle-sidebar {
       position:absolute;
       color:@texteLight;
@@ -118,6 +124,12 @@ body {
     margin-left: 15%;
     background-color: transparent;
     color:@texteLight;
+
+    &:not(.header-off) {
+      @media only screen and (max-width: 1200px) {
+        margin-left: 178px;
+      }
+    }
 
     .breadcrumbs{
       display: block;

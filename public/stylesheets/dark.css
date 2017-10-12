@@ -35,6 +35,11 @@ body #header {
   top: 0%;
   z-index: 1;
 }
+@media only screen and (max-width: 1200px) {
+  body #header:not(.off) {
+    width: 178px;
+  }
+}
 body #header #toggle-sidebar {
   position: absolute;
   color: #ffffff;
@@ -95,6 +100,11 @@ body #main {
   margin-left: 15%;
   background-color: transparent;
   color: #ffffff;
+}
+@media only screen and (max-width: 1200px) {
+  body #main:not(.header-off) {
+    margin-left: 178px;
+  }
 }
 body #main .breadcrumbs {
   display: block;
