@@ -22,6 +22,7 @@ Ouvrir le navigateur sur l'url https://localhost:8443/
 Pour ajouter une entrée, vous pouvez insérer un nouvel élément `<li>Mon sous-menu</li>` à l'intérieur du `<ul></ul>`
 ```html
 <aside id="header">
+  <i id="toggle-sidebar" class="fa fa-bars on"></i>
   <nav>
     <img src="img/logo.png" alt="Logo musique">
     <ul>
@@ -33,14 +34,18 @@ Pour ajouter une entrée, vous pouvez insérer un nouvel élément `<li>Mon sous
   </nav>
 </aside>
 ```
+L'élément `<i id="toggle-sidebar" class="fa fa-bars on"></i>` est important car il permet de cacher le menu de navigation.
+L'élément `<img src="img/logo.png" alt="Logo musique">` n'est pas essentiel.
 
+## Page principale
 
-## Page artiste
-
-Cette section représente le contenu de la page affichée à l'écran.
+Cette section représente le conteneur principal de la page affichée à l'écran.
 ```html
 <section id="main" class="conteneur">
 ```
+NB : Ce conteneur est essentiel.
+
+## Page artiste
 
 Pour créer une page artiste, il faut d'abord ouvrir un `<article></article>` dans lequel on va insérer les éléments ci-dessous.
 ```html
@@ -48,6 +53,7 @@ Pour créer une page artiste, il faut d'abord ouvrir un `<article></article>` da
 	Ici, on va insérer les éléments ci-dessous (nom de l'artiste, followers, barre d'actions, biographie, discographie, slider) dans des <div> qui possède différentes classes.
 </article>
 ```
+NB : l'élément `<article class="contenu">` doit être inséré dans le `<section id="main" class="conteneur">`.
 
 L'application est actuellement en mesure de fournir des informations sur un artiste :
 
