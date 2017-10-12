@@ -13,6 +13,9 @@ $(document).ready(function() {
 
   // Fonction de changement de thème
   changerTheme();
+
+  // Appel à l'API
+  appelAPI();
 });
 
 // Initialisation de l'angle de rotation à 0
@@ -29,6 +32,7 @@ function initialisationSlider() {
   // Avec le nombre d'images on peut calculer le degré de rotation de chaque image
   degreRotation = 360 / (nombreImages-1);
 
+  // On applique le bon degré de rotation sur chaque élément
   $('#slider-rotation img').each(function(index) {
     $(this).css('transform', 'rotateY(' + index*degreRotation*(-1) +'deg)');
   });
@@ -69,20 +73,25 @@ function initialisationSidebar() {
   // Toggle de la sidebar
   $('#toggle-sidebar').on('click', function(event) {
 
+    // Bricolage, on fadeOut le bouton toggle-sidebar avant de le déplacer et de le fadeIn
     $(this).fadeOut(150, function() {
+      // La classe active déplace le toggle-sidebar hors de la #header (quand celle-ci est masquée)
       $(this).toggleClass('active');
       $(this).fadeIn(150);
     });
 
+    // On calcul les dimensions pour toggle le #header et le #main
     var headerLeftToggle = ($('#header')[0].style.left == '-15%') ? '0%' : '-15%';
     var mainWidthToggle = ($('#main')[0].style.width == '100%') ? '85%' : '100%';
     var mainMarginLeftToggle = ($('#main')[0].style.marginLeft == '0%') ? '15%' : '0%';
 
+    // Animation du header en 250ms
     $('#header').toggleClass('off');
     $('#header').animate({
       'left':headerLeftToggle
     }, 250);
 
+    // Animation du main en 250ms
     $('#main').toggleClass('header-off');
     $('#main').animate({
       'margin-left':mainMarginLeftToggle,
@@ -91,11 +100,15 @@ function initialisationSidebar() {
 
   });
 
-  // Toggle des playlists
+  // Toggle des sousmenus : "Mes playlists" / "Mes favoris" (dans la #header sidebar)
   $( ".toggle-sousmenu" ).click(function() {
+    // Le <li> qui déclenche le toggle ("Mes playlists" / "Mes favoris") contient l'id de la cible en data-target
     var cible = $(this).data('target');
+
+    // On slide à vitesse normale
     $(cible).slideToggle("normal");
 
+    // On remplace le chevron down par up (et vice versa)
     if ($(this).find('i').hasClass('fa-chevron-down')) {
       $(this).find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
     } else {
@@ -134,27 +147,50 @@ function initilisationTitres() {
   $('.titres-album > li').hover(
     // Mousein
     function(event) {
+      // On affiche le bouton play (si la lecture n'a pas encore commencée sur ce titre)
       if ($(this).data('status') == 'off') {
         $(this).find('.bouton-play').removeClass('hidden');
+      // On affiche le bouton pause (si la lecture est en cours)
       } else {
-        $(this).find('.bouton-play').removeClass('hidden');
+        $(this).find('.bouton-pause').removeClass('hidden');
       }
     },
     // Mouseout
     function(event) {
+      // On cache le bouton play (si la lecture n'a pas encore commencée sur ce titre)
       if ($(this).data('status') == 'off') {
         $(this).find('.bouton-play').addClass('hidden');
+      // On cache le bouton pause (si la lecture est en cours)
       } else {
-        $(this).find('.bouton-play').addClass('hidden');
+        $(this).find('.bouton-pause').addClass('hidden');
       }
     }
   );
 }
 
+// Solution très très dégueulasse pour changer de thème à la volée (désolé, pas eu le temps de faire + propre)
 function changerTheme() {
+  // Quand on clique sur une icone de theme
   $('.breadcrumbs_style_element').on('click', function(event) {
+    // On récupère le data-target contenant le nom du bon fichier css
     var cibleCSS = $(this).data('target');
 
+    // On met à jour le fichier css dans la balise link
     $('#cssSource').attr('href', 'stylesheets/'+cibleCSS);
   });
+}
+
+// Requête sur une API
+function appelAPI() {
+  $.ajax({
+    url:'https://swapi.co/api/films/1/',
+    method: 'get',
+    beforeSend: function(data) {
+      $('.description-artiste').addClass('loading').html('<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>');
+    },
+    success: function(data) {
+      var description = data.opening_crawl;
+      $('.description-artiste').removeClass('loading').html(description);
+    }
+  })
 }

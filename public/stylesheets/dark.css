@@ -101,9 +101,29 @@ body #main {
   background-color: transparent;
   color: #ffffff;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 780px) {
+  body #main:not(.header-off) {
+    margin-left: 0px;
+    width: 100%;
+    z-index: 0;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 781px) {
   body #main:not(.header-off) {
     margin-left: 178px;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 920px) {
+  body #main.header-off .breadcrumbs {
+    width: 88%;
+  }
+}
+@media only screen and (max-width: 920px) {
+  body #main.header-off .breadcrumbs {
+    width: 75%;
+  }
+  body #main.header-off .breadcrumbs .breadcrumbs_style {
+    right: 13%;
   }
 }
 body #main .breadcrumbs {
@@ -208,38 +228,42 @@ body #main article.contenu div.actions button.btn:hover {
 body #main article.contenu div.actions button.btn.btn-principal {
   background-color: #1ed760;
   border: 2px solid transparent;
-  transition: font-weight 0.5s linear;
-  -moz-transition: font-weight 0.5s linear;
-  -webkit-transition: font-weight 0.5s linear;
+  transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+  -moz-transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
 }
 body #main article.contenu div.actions button.btn.btn-principal:hover {
-  font-weight: bold;
-  border: 2px solid transparent;
+  color: #ffffff;
+  border-color: #ababab;
+  background-color: #17a94b;
 }
 body #main article.contenu div.actions button.btn.btn-secondaire {
   background-color: transparent;
-  border: 2px solid #bbbbbb;
-  transition: font-weight 0.5s linear;
-  -moz-transition: font-weight 0.5s linear;
-  -webkit-transition: font-weight 0.5s linear;
+  border: 2px solid #5a5a5a;
+  transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease;
 }
 body #main article.contenu div.actions button.btn.btn-secondaire:hover {
-  font-weight: bold;
-  border: 2px solid #bbbbbb;
+  background-color: #4a4a4a;
 }
 body #main article.contenu div.actions button.btn.btn-transparent {
   background-color: transparent;
-  border: 2px solid transparent;
-  transition: font-weight 0.5s linear;
-  -moz-transition: font-weight 0.5s linear;
-  -webkit-transition: font-weight 0.5s linear;
+  border: 2px solid #5a5a5a;
+  transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease;
 }
 body #main article.contenu div.actions button.btn.btn-transparent:hover {
-  font-weight: bold;
-  border: 2px solid transparent;
+  background-color: #4a4a4a;
 }
 body #main article.contenu div.description-artiste {
   padding: 15px 30px;
+  line-height: 1.5;
+  text-align: justify;
+}
+body #main article.contenu div.description-artiste.loading {
+  text-align: center;
 }
 .album-artiste {
   display: flex;

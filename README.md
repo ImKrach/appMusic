@@ -45,7 +45,7 @@ Cette section représente le contenu de la page affichée à l'écran.
 Pour créer une page artiste, il faut d'abord ouvrir un `<article></article>` dans lequel on va insérer les éléments ci-dessous.
 ```html
 <article class="contenu">
-	Ici, on va insérer les éléments ci-dessous (nom de l'artiste, followers, barre d'actions, biographie, discographie) dans des <div> qui possède différentes classes.
+	Ici, on va insérer les éléments ci-dessous (nom de l'artiste, followers, barre d'actions, biographie, discographie, slider) dans des <div> qui possède différentes classes.
 </article>
 ```
 
@@ -93,3 +93,23 @@ Si vous préférez la pochette de l'album à droite utiliser la classe .pochette
           </ul>
       </div>
     ```
+
+* Le slider affiché à l'écran est dynamique et nécessite au moins 4 images pour ne pas être trop dégueulasse. Voir les fonctions initialisationSlider et animerSlider, elles sont assez cools. Pour intégrer un slider insérer le code suivant dans la balise `<article class="contenu">`
+  * ```html
+    <div id="slider">
+      <figure id="slider-rotation">
+        <img src="images/album_1.jpg" alt="image_album_1" data-target="#album_1">
+        <img src="images/album_2.jpg" alt="image_album_2" data-target="#album_2">
+        <img src="images/album_3.jpg" alt="image_album_3" data-target="#album_3">
+        <img src="images/album_4.jpg" alt="image_album_4" data-target="#album_4">
+        <img src="images/album_5.jpg" alt="image_album_5" data-target="#album_5">
+      </figure>
+      <span style="float:left" class="slider-icone-rotation slider-icone-rotation-left" onclick="animerSlider('avant')">
+        <i class="fa fa-chevron-left"></i>
+      </span>
+      <span style="float:right" class="slider-icone-rotation slider-icone-rotation-right" onclick="animerSlider('apres')">
+        <i class="fa fa-chevron-right"></i>
+      </span>
+    </div>
+    ```
+  * Bien sûr il faut avoir les images dans le dossier public/images

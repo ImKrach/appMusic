@@ -1,0 +1,9 @@
+Le texte de la description artistique pourrait être plus espacé pour le rendre plus léger.
+  --> Correction : passage du line-height à 1.5
+
+Le delai de 0.5s sur l'effet :hover des boutons donne une petite sensation de lag.
+  --> Correction : changement de l'effect hover, maintenant le fond change au lieu de la police
+
+Il faut deux clics aux boutons play pour qu'ils passent en boutons pause.
+
+PS: Nice site

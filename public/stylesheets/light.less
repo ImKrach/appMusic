@@ -4,14 +4,18 @@
   src: url('../fonts/Amatic-Bold.ttf');
 }
 
+@texteLighter:#ffffff;
 @texteLight:#e1e1e1;
 @texteDark:#4c4c4c;
 @texteDarker:#444444;
 @backgroundClair:rgba(200,200,200,0.87);
 @backgroundDark:#777777;
 @borderDark:#4c4c4c;
+@borderLight:#ababab;
 @boutonPrincipal : #53b375;
+@boutonPrincipalHover : #3e8e5a;
 @transparent: transparent;
+@boutonTransparentHover : #4a4a4a;
 
 html, body {
     margin:0;
@@ -127,8 +131,31 @@ body {
     color:@texteDark;
 
     &:not(.header-off) {
-      @media only screen and (max-width: 1200px) {
+      @media only screen and (max-width: 780px) {
+        margin-left: 0px;
+        width: 100%;
+        z-index: 0;
+      }
+      @media only screen and (max-width: 1200px) and (min-width: 781px) {
         margin-left: 178px;
+      }
+    }
+
+    &.header-off {
+      @media only screen and (max-width: 1200px) and (min-width: 920px) {
+        .breadcrumbs {
+          width: 88%;
+        }
+      }
+
+      @media only screen and (max-width: 920px) {
+        .breadcrumbs {
+          width: 75%;
+
+          .breadcrumbs_style {
+            right: 13%;
+          }
+        }
       }
     }
 
@@ -255,43 +282,46 @@ body {
         button.btn.btn-principal {
           background-color: @boutonPrincipal;
           border:2px solid @transparent;
-          transition: font-weight 0.5s linear;
-          -moz-transition: font-weight 0.5s linear;
-          -webkit-transition: font-weight 0.5s linear;
+          transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+          -moz-transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+          -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
 
           &:hover {
-            font-weight:bold;
-            border:2px solid @transparent;
+            color: @texteLighter;
+            border-color:@borderLight;
+            background-color: @boutonPrincipalHover;
           }
         }
         button.btn.btn-secondaire {
           background-color: @transparent;
-          border:2px solid @texteLight;
-          transition: font-weight 0.5s linear;
-          -moz-transition: font-weight 0.5s linear;
-          -webkit-transition: font-weight 0.5s linear;
+          border:2px solid @borderLight;
+          transition: background-color 0.5s ease, border-color 0.5s ease , color 0.5s ease;
+          -moz-transition: background-color 0.5s ease, border-color 0.5s ease , color 0.5s ease;
+          -webkit-transition: background-color 0.5s ease, border-color 0.5s ease , color 0.5s ease;
 
           &:hover {
-            font-weight:bold;
-            border:2px solid @texteLight;
+            background-color: @boutonTransparentHover;
+            color: @texteLighter;
           }
         }
         button.btn.btn-transparent {
           background-color: @transparent;
-          border:2px solid @transparent;
-          transition: font-weight 0.5s linear;
-          -moz-transition: font-weight 0.5s linear;
-          -webkit-transition: font-weight 0.5s linear;
+          border:2px solid @borderLight;
+          transition: background-color 0.5s ease, border-color 0.5s ease , color 0.5s ease;
+          -moz-transition: background-color 0.5s ease, border-color 0.5s ease , color 0.5s ease;
+          -webkit-transition: background-color 0.5s ease, border-color 0.5s ease , color 0.5s ease;
 
           &:hover {
-            font-weight:bold;
-            border:2px solid @transparent;
+            background-color: @boutonTransparentHover;
+            color: @texteLighter;
           }
         }
       }
 
       div.description-artiste {
         padding:15px 30px;
+        line-height: 1.5;
+        text-align: justify;
       }
     }
   }

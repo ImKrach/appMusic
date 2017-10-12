@@ -10,8 +10,11 @@
 @backgroundClair:rgba(11,17,20,0.87);
 @backgroundDark:#111111;
 @borderDark:#5a5a5a;
+@borderLight:#ababab;
 @boutonPrincipal : #1ed760;
+@boutonPrincipalHover : #17a94b;
 @transparent: transparent;
+@boutonTransparentHover : #4a4a4a;
 
 html, body {
     margin:0;
@@ -126,8 +129,31 @@ body {
     color:@texteLight;
 
     &:not(.header-off) {
-      @media only screen and (max-width: 1200px) {
+      @media only screen and (max-width: 780px) {
+        margin-left: 0px;
+        width: 100%;
+        z-index: 0;
+      }
+      @media only screen and (max-width: 1200px) and (min-width: 781px) {
         margin-left: 178px;
+      }
+    }
+
+    &.header-off {
+      @media only screen and (max-width: 1200px) and (min-width: 920px) {
+        .breadcrumbs {
+          width: 88%;
+        }
+      }
+
+      @media only screen and (max-width: 920px) {
+        .breadcrumbs {
+          width: 75%;
+
+          .breadcrumbs_style {
+            right: 13%;
+          }
+        }
       }
     }
 
@@ -254,43 +280,48 @@ body {
         button.btn.btn-principal {
           background-color: @boutonPrincipal;
           border:2px solid @transparent;
-          transition: font-weight 0.5s linear;
-          -moz-transition: font-weight 0.5s linear;
-          -webkit-transition: font-weight 0.5s linear;
+          transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+          -moz-transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+          -webkit-transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
 
           &:hover {
-            font-weight:bold;
-            border:2px solid @transparent;
+            color: @texteLight;
+            border-color:@borderLight;
+            background-color: @boutonPrincipalHover;
           }
         }
         button.btn.btn-secondaire {
           background-color: @transparent;
-          border:2px solid @texteDark;
-          transition: font-weight 0.5s linear;
-          -moz-transition: font-weight 0.5s linear;
-          -webkit-transition: font-weight 0.5s linear;
+          border:2px solid @borderDark;
+          transition: background-color 0.5s ease;
+          -moz-transition: background-color 0.5s ease;
+          -webkit-transition: background-color 0.5s ease;
 
           &:hover {
-            font-weight:bold;
-            border:2px solid @texteDark;
+            background-color: @boutonTransparentHover;
           }
         }
         button.btn.btn-transparent {
           background-color: @transparent;
-          border:2px solid @transparent;
-          transition: font-weight 0.5s linear;
-          -moz-transition: font-weight 0.5s linear;
-          -webkit-transition: font-weight 0.5s linear;
+          border:2px solid @borderDark;
+          transition: background-color 0.5s ease;
+          -moz-transition: background-color 0.5s ease;
+          -webkit-transition: background-color 0.5s ease;
 
           &:hover {
-            font-weight:bold;
-            border:2px solid @transparent;
+            background-color: @boutonTransparentHover;
           }
         }
       }
 
       div.description-artiste {
         padding:15px 30px;
+        line-height: 1.5;
+        text-align: justify;
+
+        &.loading {
+          text-align: center;
+        }
       }
     }
   }
