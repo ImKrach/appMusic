@@ -13,20 +13,19 @@ body {
   align-items: stretch;
   flex-wrap: wrap;
   height: 100%;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b1114+0,303030+100&0.71+0,1+100 */
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b1114+0,303030+100&0.87+0,1+100 */
-  background: -moz-linear-gradient(top, rgba(11, 17, 20, 0.87) 0%, #303030 100%);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eadcdc+0,ddbaba+100&0.87+0,1+100 */
+  background: -moz-linear-gradient(top, rgba(234, 220, 220, 0.87) 0%, #ddbaba 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(11, 17, 20, 0.87) 0%, #303030 100%);
+  background: -webkit-linear-gradient(top, rgba(234, 220, 220, 0.87) 0%, #ddbaba 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(11, 17, 20, 0.87) 0%, #303030 100%);
+  background: linear-gradient(to bottom, rgba(234, 220, 220, 0.87) 0%, #ddbaba 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#de0b1114', endColorstr='#303030', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#deeadcdc', endColorstr='#ddbaba', GradientType=0);
   /* IE6-9 */
 }
 body #header {
-  background-color: #111111;
-  color: #ffffff;
+  background-color: #e29fab;
+  color: #e1e1e1;
   width: 15%;
   height: 100%;
   min-height: 100vh;
@@ -43,14 +42,14 @@ body #header #toggle-sidebar {
   cursor: pointer;
 }
 body #header #toggle-sidebar.active {
-  color: #ffffff;
+  color: #444444;
   top: 15px;
   right: -35px;
 }
 body #header nav {
   padding-left: 15px;
   line-height: 2;
-  color: #bbbbbb;
+  color: #ffffff;
   font-family: 'Helvetica';
   font-weight: bold;
 }
@@ -60,7 +59,7 @@ body #header nav img {
   margin: 25px auto;
   padding-bottom: 50px;
   padding-top: 25px;
-  border-bottom: 1px solid #bbbbbb;
+  border-bottom: 1px solid #ffffff;
 }
 body #header nav ul {
   list-style-type: none;
@@ -73,7 +72,7 @@ body #header nav ul li {
   transition: color 1s;
 }
 body #header nav ul li:hover {
-  color: #ffffff;
+  color: #e1e1e1;
 }
 body #header nav ul li.toggle-sousmenu i {
   margin-top: 7px;
@@ -94,16 +93,16 @@ body #main {
   min-height: 100vh;
   margin-left: 15%;
   background-color: transparent;
-  color: #ffffff;
+  color: #4c4c4c;
 }
 body #main .breadcrumbs {
   display: block;
   width: 90%;
   margin: 25px auto 0px auto;
   background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 10px black;
   height: 50px;
   line-height: 50px;
-  box-shadow: 1px 1px 2px black;
   padding-left: 15px;
   list-style: none;
   display: flex;
@@ -140,6 +139,7 @@ body #main .breadcrumbs .breadcrumbs_item {
   position: relative;
   padding-right: 28px;
   margin-right: 8px;
+  cursor: pointer;
 }
 body #main .breadcrumbs .breadcrumbs_item:after {
   content: "\f054";
@@ -156,6 +156,10 @@ body #main .breadcrumbs .breadcrumbs_item:after {
 body #main .breadcrumbs .breadcrumbs_item.active {
   margin-right: 0;
   padding-right: 0;
+  font-weight: bold;
+}
+body #main .breadcrumbs .breadcrumbs_item:hover {
+  text-decoration: underline;
 }
 body #main .breadcrumbs .breadcrumbs_item.active:after {
   display: none;
@@ -166,10 +170,10 @@ body #main article.contenu {
 }
 body #main article.contenu hr {
   width: 30%;
-  color: #bbbbbb;
+  color: #4c4c4c;
 }
-body #main article.contenu div.album-artiste {
-  border-bottom: 1px solid #5a5a5a;
+body #main article.contenu div.album-artiste:not(:last-child) {
+  border-bottom: 1px solid #4c4c4c;
 }
 body #main article.contenu div.entete-artiste h4.followers-artiste {
   font-weight: lighter;
@@ -179,7 +183,7 @@ body #main article.contenu div.actions {
 }
 body #main article.contenu div.actions button.btn {
   text-transform: uppercase;
-  color: #ffffff;
+  color: #4c4c4c;
   border-radius: 30px;
   padding: 15px 25px;
   font-size: 12px;
@@ -191,27 +195,36 @@ body #main article.contenu div.actions button.btn:hover {
   cursor: pointer;
 }
 body #main article.contenu div.actions button.btn.btn-principal {
-  background-color: #1ed760;
+  background-color: #53b375;
   border: 2px solid transparent;
+  transition: font-weight 0.5s linear;
+  -moz-transition: font-weight 0.5s linear;
+  -webkit-transition: font-weight 0.5s linear;
 }
 body #main article.contenu div.actions button.btn.btn-principal:hover {
-  font-size: 16px;
+  font-weight: bold;
   border: 2px solid transparent;
 }
 body #main article.contenu div.actions button.btn.btn-secondaire {
   background-color: transparent;
-  border: 2px solid #bbbbbb;
+  border: 2px solid #e1e1e1;
+  transition: font-weight 0.5s linear;
+  -moz-transition: font-weight 0.5s linear;
+  -webkit-transition: font-weight 0.5s linear;
 }
 body #main article.contenu div.actions button.btn.btn-secondaire:hover {
-  font-size: 16px;
-  border: 2px solid #bbbbbb;
+  font-weight: bold;
+  border: 2px solid #e1e1e1;
 }
 body #main article.contenu div.actions button.btn.btn-transparent {
   background-color: transparent;
   border: 2px solid transparent;
+  transition: font-weight 0.5s linear;
+  -moz-transition: font-weight 0.5s linear;
+  -webkit-transition: font-weight 0.5s linear;
 }
 body #main article.contenu div.actions button.btn.btn-transparent:hover {
-  font-size: 16px;
+  font-weight: bold;
   border: 2px solid transparent;
 }
 body #main article.contenu div.description-artiste {
@@ -320,7 +333,8 @@ body #main article.contenu div.description-artiste {
 div#slider {
   padding: 30px 0px;
   perspective: 350px;
-  background: rgba(0, 0, 0, 0.56);
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 10px black;
   overflow: hidden;
   min-height: 350px;
 }
