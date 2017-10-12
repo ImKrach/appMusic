@@ -1,5 +1,20 @@
 # tp-frontpage
 
+## Pré-requis
+
+Node et npm doivent être installés
+```
+sudo apt-get install node
+```
+
+## Installation
+
+```
+git clone https://github.com/ImKrach/appMusic.git
+cd appMusic
+npm install
+npm start
+```
 
 ## Menu de navigation
 
