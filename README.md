@@ -4,7 +4,7 @@
 
 Node et npm doivent être installés
 ```
-sudo apt-get install node
+sudo apt-get install node npm -y
 ```
 
 ## Installation
@@ -15,6 +15,7 @@ cd appMusic
 npm install
 npm start
 ```
+Ouvrir le navigateur sur l'url https://localhost:8443/
 
 ## Menu de navigation
 
